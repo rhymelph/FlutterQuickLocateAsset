@@ -1,0 +1,41 @@
+<idea-plugin>
+  <id>com.rhyme.flutter.plugin.jumptoassets</id>
+  <name>FlutterQuickLocateAsset</name>
+  <version>1.4</version>
+  <vendor email="rhymelph@gmail.com" url="https://github.com/rhymelph">Rhyme.li</vendor>
+
+  <description><![CDATA[
+      Help flutter developers quickly locate resource file strings by hovering over the cursor。
+    ]]></description>
+
+  <change-notes><![CDATA[
+      1.1 <br>
+      add description.<br>
+      1.2 <br>
+      fix bug add cursor in "string" will visible, cursor not in "string" will hide.<br>
+      1.3 <br>
+      fix bug.
+      1.4 <br>
+      fix bug.
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="com.rhyme.action.JumpToAsset" class="com.rhyme.action.JumpToAsset" text="JumpToAsset"
+            description="Auto jump to asset">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
